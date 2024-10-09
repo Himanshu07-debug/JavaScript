@@ -57,7 +57,7 @@ fetchCustom("www.google.com", function downloadCallback(response){
     console.log("Download response is", response);
     writeFile(response, function writeCallback(filenameResponse){
         console.log("new file written is", filenameResponse);
-        uploadFile(filenameResponse, "ww.drive.google.com", function uploadCallback(uploadResponse){
+        uploadFile(filenameResponse, "www.drive.google.com", function uploadCallback(uploadResponse){
             console.log("Successfully uploaded", uploadResponse);
         })
     } )
