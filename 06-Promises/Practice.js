@@ -87,12 +87,13 @@ console.log("end of the file");
 // 4. timer 1 done
 // called dummyPromise, it comes to the call Stack.. then a new Promise created and as it contains
 // async one, the resolve will happen 10 sec later.. So current Promise will be <pending> & all the
-// functions will popped from the call stack
+// functions will popped from the call stack... 
 
 // Now multitask queue is Empty and timer2 in event queue
 // 5. timer 2 done
 
-// After 10 sec.. resolve hua.. PromiseX is added in multi-task queue
+// After 10 sec.. Event queue me dummyPromise ke promise ka setTimeOut aaya. Event queue se nikla nikla.. Run hua, Resolve hua...
+// PromiseX is added in multi-task queue
 // 6. timer's promise
 
 
