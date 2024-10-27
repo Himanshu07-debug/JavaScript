@@ -51,3 +51,19 @@ let ob2 = {
 }
 
 ob2.display();
+
+
+var ob = {
+    name : "Lucky",
+    company : "Infosys",
+    display : () => {
+        console.log(this, "is the calling site");
+        console.log(this.name , " ", this.company);
+        // this --> {}
+        // this.name, this.company --> undefined ( lexical scope )
+    }
+}
+
+console.log(ob.display());   
+
+console.log(this);          // at global Scope, this --> empty Object
